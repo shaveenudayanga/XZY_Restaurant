@@ -1,0 +1,61 @@
+.hiUser {
+    -fx-font-family : "Arial Rounded MT Bold";
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 24px;
+    -fx-effect: dropshadow( gaussian , rgba(0, 0, 0, 0.25) , 5, 0.0 , 2 , 2 );
+}
+
+
+.tileButton {
+
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow( gaussian , rgba(0, 0, 0, 0.25) , 5, 0.0 , 2 , 2 );
+}
+
+.tileButton .label {
+    -fx-text-fill: rgba(255, 255, 255, 0.8); /* Initial text color */
+        -fx-font-size: 16px;
+        -fx-effect: dropshadow( gaussian , rgba(0, 0, 0, 0.25) , 5, 0.0 , 2 , 2 );
+}
+
+
+.tileButton:hover {
+    -fx-effect: dropshadow( gaussian , rgba(0, 0, 0, 0.5) , 10, 0.0 , 4 , 4 );
+}
+
+.tileButton:hover .label {
+    -fx-effect: dropshadow( gaussian , rgba(0, 0, 0, 0.5) , 10, 0.0 , 4 , 4 );
+        -fx-text-fill: #ffffff;
+            -fx-font-size: 16.5px;
+            -fx-animation: button-hover 0.7s ease-in-out forwards;
+}
+
+
+.tileButton:pressed {
+    -fx-background-color: rgba(255, 255, 255, 0.01); /* Slightly more opaque when pressed */
+    -fx-effect: dropshadow( gaussian , rgba(0, 0, 0, 0.75) , 15, 0.0 , 6 , 6 );
+}
+
+.tileButton:pressed .label {
+    -fx-effect: dropshadow( gaussian , rgba(0, 0, 0, 0.5) , 10, 0.0 , 4 , 4 );
+        -fx-text-fill: #ffffff;
+            -fx-font-size: 17px;
+            -fx-animation: button-hover 0.7s ease-in-out forwards;
+}
+
+.tileButton:pressed .image-view {
+      -fx-scale-x: 1.15;
+      -fx-scale-y: 1.15;
+      -fx-transition: -fx-scale 0.7s ease-in-out forwards;
+}
+
+
+@keyframes tileButton-hover {
+    from {
+        -fx-background-color: transparent;
+    }
+    to {
+        -fx-background-color: rgba(255, 255, 255, 0.7);
+    }
+}

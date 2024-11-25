@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneBookTable" prefHeight="536.0" prefWidth="759.0" stylesheets="@../../../stylesheets/BookNow.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.customer.sections.BookNowSectionController">
+   <children>
+      <Label text="Book Tables" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+         <padding>
+            <Insets left="30.0" top="30.0" />
+         </padding>
+      </Label>
+      <AnchorPane layoutX="79.0" layoutY="65.0" prefHeight="360.0" prefWidth="600.0" style="-fx-background-color: rgba(0,0,0,0.8); -fx-background-radius: 5;" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="btnOneTimeReservations" mnemonicParsing="false" onAction="#btnOneTimeReservationsOnAction" prefHeight="50.0" prefWidth="700.0" styleClass="bookingsButton" text="One-Time Reservations" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnRecurringReservations" mnemonicParsing="false" onAction="#btnRecurringReservationsOnAction" prefHeight="50.0" prefWidth="700.0" styleClass="bookingsButton" text="Recurring Reservations" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+            <AnchorPane fx:id="paneOneTimeReservations" prefHeight="310.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0">
+                                 <children>
+                                    <Label text="Select date*" textFill="#ececec">
+                                       <font>
+                                          <Font name="Varela Round Regular" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="dtpDateSelectOneTimeReservation" prefHeight="26.0" prefWidth="200.0">
+                                       <VBox.margin>
+                                          <Insets left="35.0" right="35.0" />
+                                       </VBox.margin></DatePicker>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="300.0">
+                                 <children>
+                                    <Label text="Check in time*" textFill="#ececec">
+                                       <font>
+                                          <Font name="Varela Round Regular" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="cmbTimeFromOneTimeReservation" prefHeight="26.0" prefWidth="200.0" promptText="HH">
+                                       <VBox.margin>
+                                          <Insets left="35.0" right="35.0" />
+                                       </VBox.margin></ComboBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="300.0">
+                                 <children>
+                                    <Label text="Check out time*" textFill="#ececec">
+                                       <font>
+                                          <Font name="Varela Round Regular" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="cmbTimeToOneTimeReservation" prefHeight="26.0" prefWidth="200.0" promptText="HH">
+                                       <VBox.margin>
+                                          <Insets left="35.0" right="35.0" />
+                                       </VBox.margin></ComboBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="50.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="599.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefWidth="450.0">
+                                 <children>
+                                    <Label text="Guests*" textFill="#ececec">
+                                       <font>
+                                          <Font name="Varela Round Regular" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="cmbGuestsOneTimeReservation" prefHeight="26.0" prefWidth="100.0">
+                                       <VBox.margin>
+                                          <Insets left="70.0" right="70.0" />
+                                       </VBox.margin></ComboBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="100.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefWidth="450.0">
+                                 <children>
+                                    <Label text="Select Table*" textFill="#ececec">
+                                       <font>
+                                          <Font name="Varela Round Regular" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnSelectTableOneTimeReservation" mnemonicParsing="false" onAction="#btnSelectTableOneTimeReservationOnAction" opacity="0.5" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #543310; -fx-border-color: white; -fx-border-radius: 5;" text="Click here" textFill="WHITE">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font name="Varela Round Regular" size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="50.0" right="50.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Label fx:id="lblTableIdOneTimeReservations" prefHeight="18.0" prefWidth="75.0" text="Table ID :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Varela Round Regular" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets right="100.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Label prefHeight="18.0" prefWidth="1000.0" text="Comments (Optional) :" textFill="#ececec">
+                           <font>
+                              <Font name="Varela Round Regular" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="100.0" right="100.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextArea fx:id="txtCommentsOneTimeReservation" minHeight="50.0" prefHeight="150.0" prefWidth="300.0">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="100.0" right="100.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <Button minHeight="40.0" mnemonicParsing="false" onAction="#btnConfirmBookingOneTimeReservationsOnAction" prefHeight="90.0" prefWidth="250.0" text="Confirm Booking" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Varela Round Regular" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="50.0" left="220.0" right="220.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paneRecurringReservations" prefHeight="310.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <GridPane alignment="CENTER" prefHeight="500.0" prefWidth="599.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="0.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="1.9999816894531222" prefHeight="17.400000000000006" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="0.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="17.79998779296875" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="25.20001220703125" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="54.40003662109373" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="48.799963378906256" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <VBox.margin>
+                              <Insets bottom="50.0" left="30.0" right="30.0" top="30.0" />
+                           </VBox.margin>
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="190.0" prefWidth="105.0" spacing="10.0" GridPane.columnIndex="4" GridPane.rowIndex="2" GridPane.rowSpan="6">
+                                 <children>
+                                    <Label text="Choose days*" textFill="#ececec">
+                                       <font>
+                                          <Font name="Varela Round Regular" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox fx:id="chcMonday" alignment="TOP_LEFT" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Monday      " textFill="WHITE">
+                                       <font>
+                                          <Font name="Varela Round Regular" size="12.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="chcTuesday" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Tuesday      " textFill="WHITE">
+                                       <font>
+                                          <Font name="Varela Round Regular" size="12.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="chcWednesday" layoutX="10.0" layoutY="28.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Wednesday" textFill="WHITE">
+                                       <font>
+                                          <Font name="Varela Round Regular" size="12.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="chcThursday" alignment="TOP_LEFT" layoutX="10.0" layoutY="45.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Thursday     " textFill="WHITE">
+                                       <font>
+                                          <Font name="Varela Round Regular" size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="chcFriday" layoutX="10.0" layoutY="63.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Friday          " textFill="WHITE">
+                                       <font>
+                                          <Font name="Varela Round Regular" size="12.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="chcSaturday" layoutX="10.0" layoutY="80.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Saturday     " textFill="WHITE">
+                                       <font>
+                                          <Font name="Varela Round Regular" size="12.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="chcSunday" layoutX="10.0" layoutY="98.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Sunday        " textFill="WHITE">
+                                       <font>
+                                          <Font name="Varela Round Regular" size="12.0" />
+                                       </font>
+                                    </CheckBox>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </GridPane.margin>
+                              </VBox>
+                              <Label alignment="BOTTOM_CENTER" prefHeight="100.0" text="Date from*" textFill="#ececec" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Varela Round Regular" size="12.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label alignment="BOTTOM_CENTER" prefHeight="100.0" text="Date to*" textFill="#ececec" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Varela Round Regular" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="BOTTOM_CENTER" prefHeight="100.0" text="Guests*" textFill="#ececec" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Varela Round Regular" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="cmbGuestsRecurringReserve" prefHeight="26.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets left="30.0" right="30.0" />
+                                 </GridPane.margin></ComboBox>
+                              <DatePicker fx:id="dtpDateToRecurringReserve" prefHeight="26.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </GridPane.margin>
+                              </DatePicker>
+                              <DatePicker fx:id="dtpDateFromRecurringReserve" prefHeight="26.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </GridPane.margin>
+                              </DatePicker>
+                              <Label alignment="BOTTOM_CENTER" prefHeight="100.0" text="Check in time*" textFill="#ececec" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Varela Round Regular" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="BOTTOM_CENTER" prefHeight="100.0" text="Check out time*" textFill="#ececec" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Varela Round Regular" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="BOTTOM_CENTER" prefHeight="100.0" text="Select Table*" textFill="#ececec" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Varela Round Regular" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="cmbTimeFromRecurringReserve" prefHeight="26.0" prefWidth="200.0" promptText="HH" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </GridPane.margin>
+                              </ComboBox>
+                              <ComboBox fx:id="cmbTimeToRecurringReserve" prefHeight="26.0" prefWidth="200.0" promptText="HH" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </GridPane.margin>
+                              </ComboBox>
+                              <Button fx:id="btnSelectTableRecurringReservation" mnemonicParsing="false" onAction="#btnSelectTableRecurringReservationOnAction" opacity="0.5" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #543310; -fx-border-color: white; -fx-border-radius: 5;" text="Click here" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="Varela Round Regular" size="12.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Label fx:id="lblTableIdRecurringReservations" prefHeight="18.0" prefWidth="75.0" text="Table ID :" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Varela Round Regular" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="BOTTOM_CENTER" prefHeight="100.0" text="Comments (Optional) :" textFill="#ececec" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="Varela Round Regular" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <TextArea fx:id="txtCommentsRecurring" prefHeight="48.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="7">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                                 </GridPane.margin>
+                              </TextArea>
+                              <Button mnemonicParsing="false" onAction="#btnConfirmBookingRecurringOnAction" prefHeight="50.0" prefWidth="250.0" text="Confirm Booking" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Varela Round Regular" size="14.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="67.0" right="18.0" top="7.0" />
+                                 </GridPane.margin>
+                              </Button>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

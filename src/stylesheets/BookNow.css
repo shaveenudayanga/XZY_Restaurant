@@ -1,0 +1,23 @@
+.bookingsButton {
+    -fx-font-family : "Arial Rounded MT Bold";
+    -fx-font-size: 16px;
+    -fx-background-radius:5;
+ /*   -fx-background-color: #AF8F6F;*/
+    -fx-background-color:  rgba(0,0,0,0.5);
+    -fx-text-fill: #ffffff;
+}
+
+
+.bookingsButton:hover {
+    -fx-font-family : "Arial Rounded MT Bold";
+    -fx-text-fill: #ffffff;
+        -fx-font-size: 16.2px;
+        -fx-animation: button-hover 0.7s ease-in-out forwards;
+}
+
+.bookingsButton:pressed {
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16.5px;
+    -fx-animation: button-hover 0.7s ease-in-out forwards;
+}

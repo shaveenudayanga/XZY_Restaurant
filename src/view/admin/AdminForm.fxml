@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" minHeight="400.0" minWidth="500.0" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.admin.AdminFormController">
+   <children>
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="500.0" minWidth="200.0" prefHeight="500.0" prefWidth="220.0" style="-fx-background-color: rgba(0,0,250,0.4);" styleClass="anchor-pane" stylesheets="@../../stylesheets/Menu.css" BorderPane.alignment="TOP_LEFT">
+               <children>
+                  <VBox alignment="TOP_CENTER" layoutX="27.0" layoutY="140.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="87.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/icons8-admin-50.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label fx:id="lblHiAdmin" alignment="TOP_CENTER" minWidth="200.0" prefHeight="18.0" prefWidth="220.0" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </Label>
+                        <Button minHeight="50.0" mnemonicParsing="false" onAction="#btnCustomersOnAction" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: transparent;" styleClass="menuButton" text="Manage Customers" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="190.0" minHeight="50.0" mnemonicParsing="false" onAction="#btnBookingsOnAction" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: transparent;" styleClass="menuButton" text="Manage Bookings" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="240.0" minHeight="50.0" mnemonicParsing="false" onAction="#btnTablesOnAction" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: transparent;" styleClass="menuButton" text="Manage Tables" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="291.0" minHeight="50.0" mnemonicParsing="false" onAction="#btnControlsOnAction" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: transparent;" styleClass="menuButton" text="Control Panel" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <HBox alignment="CENTER" onMouseClicked="#btnLogOutOnAction" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: transparent;" styleClass="menuButton">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <image>
+                                    <Image url="@../../images/slidebar/icons8-logout-48.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Log out" textFill="WHITE" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane minWidth="300.0" BorderPane.alignment="CENTER">
+               <children>
+                  <fx:include fx:id="paneCustomers" source="ManageCustomersForm.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <fx:include fx:id="paneBookings" source="ManageBookingsForm.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <VBox fx:id="vbTables" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView fx:id="tblTables" editable="true">
+                           <columns>
+                              <TableColumn fx:id="clmTableIdTables" prefWidth="331.9999450445175" text="Table ID" />
+                              <TableColumn fx:id="clmNoOfChairsTables" prefWidth="344.8000793457031" text="Number of Chairs" />
+                           </columns>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <VBox.margin>
+                              <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox alignment="TOP_CENTER" prefHeight="28.0" prefWidth="196.0" spacing="50.0">
+                           <children>
+                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnReqChangeTblsOnAction" prefHeight="41.0" prefWidth="189.0" text="Make a request to change tables" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="50.0" />
+                     </padding>
+                  </VBox>
+                  <BorderPane fx:id="paneControlPanel" prefHeight="600.0" prefWidth="782.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <top>
+                        <Label text="Control Panel" BorderPane.alignment="TOP_LEFT">
+                           <BorderPane.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </BorderPane.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </top>
+                     <center>
+                        <ScrollPane hbarPolicy="NEVER" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="50.0" left="50.0" right="50.0" />
+                           </BorderPane.margin>
+                           <content>
+                              <GridPane prefHeight="500.0" prefWidth="666.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.39996337890625" minWidth="10.0" prefWidth="299.9999755859375" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="381.0" minWidth="10.0" prefWidth="266.4000244140625" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints maxHeight="191.2000259399414" minHeight="20.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="269.59998807907107" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="172.79999389648438" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="172.79999389648438" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="74.59998168945313" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="108.20000305175779" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="156.19998779296878" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="156.19998779296878" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="156.19998779296878" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Toggle On/Off Send Confirmation Emails to Customers" GridPane.rowIndex="1" />
+                                    <TextField fx:id="txtMailerEmail" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <GridPane.margin>
+                                          <Insets right="50.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <Label text="Email       :" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Password :" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Emaill adress of the mailer: " GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblCurrentMailerAddress" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label text="Change Email or/and Password" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Confirmation Emails">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <PasswordField fx:id="pssMailerPassword" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <GridPane.margin>
+                                          <Insets right="50.0" />
+                                       </GridPane.margin>
+                                    </PasswordField>
+                                    <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+                                    <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="225.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <ToggleButton fx:id="toggleMailingOn" mnemonicParsing="false" text="On">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="toggleGroup" />
+                                             </toggleGroup>
+                                          </ToggleButton>
+                                          <ToggleButton fx:id="toggleMailingOff" mnemonicParsing="false" text="Off" toggleGroup="$toggleGroup" />
+                                       </children>
+                                    </HBox>
+                                    <Button fx:id="btnChangeCredentials" mnemonicParsing="false" onAction="#btnChangeCredentialsOnAction" text="Confirm" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                                 </padding>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

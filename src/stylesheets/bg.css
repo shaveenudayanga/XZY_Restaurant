@@ -1,0 +1,5 @@
+.anchor-pane-background {
+    -fx-background-image:url('@../../images/restaurant_cafe_design_39235_1920x1080.jpg');
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+}

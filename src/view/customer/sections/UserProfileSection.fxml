@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="paneUserInfo" alignment="CENTER" hgap="30.0" vgap="30.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.customer.sections.UserProfileSectionController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="371.20001220703125" minWidth="10.0" prefWidth="281.20001220703125" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="440.0" minWidth="10.0" prefWidth="387.5999877929687" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="310.0000061035156" minHeight="10.0" prefHeight="292.6000061035156" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="301.5999938964843" minHeight="10.0" prefHeight="242.9999938964844" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <VBox alignment="CENTER" spacing="20.0" style="-fx-background-radius: 20; -fx-background-color: rgba(0,0,0,0.85);">
+         <children>
+            <AnchorPane fx:id="paneDp" maxHeight="158.0" maxWidth="158.0" prefHeight="158.0" prefWidth="158.0" style="-fx-background-color: white; -fx-background-radius: 100;">
+               <children>
+                  <ImageView fx:id="imgDp" fitHeight="160.0" fitWidth="160.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-1.0">
+                     <image>
+                        <Image url="@../../../images/profile-user.256x256.png" />
+                     </image>
+                  </ImageView>
+                  <StackPane fx:id="paneEditDp" layoutX="5.0" prefHeight="150.0" prefWidth="140.0" style="-fx-background-radius: 100; -fx-background-color: rgba(0,0,0,0.7);" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="-2.0">
+                     <children>
+                        <ImageView fx:id="btnEditDp" blendMode="ADD" fitHeight="35.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/Edit%20Icon.png" />
+                           </image>
+                           <effect>
+                              <Glow level="0.93" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </AnchorPane>
+            <Label fx:id="lblUserID" prefHeight="18.0" prefWidth="120.0" text="User ID: " textFill="WHITE">
+               <font>
+                  <Font name="Varela Round Regular" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: rgba(0,0,0,0.85); -fx-background-radius: 20;" GridPane.columnIndex="1">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <HBox fx:id="hbxShowName" alignment="CENTER" layoutX="20.0" layoutY="9.0" prefHeight="42.0" prefWidth="353.0" spacing="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                     <children>
+                        <Label fx:id="lblShowName" prefHeight="23.0" prefWidth="255.0" text="Shaveen Udayanga" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imgEditName" fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/Edit%20Icon.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <InnerShadow height="119.26" radius="58.545" width="116.92">
+                                 <color>
+                                    <Color red="0.42105263471603394" green="0.41325536370277405" blue="0.41325536370277405" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hbxEditName" alignment="CENTER" layoutX="20.0" layoutY="9.0" prefHeight="42.0" prefWidth="353.0" spacing="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                     <children>
+                        <TextField fx:id="txtFirstName" prefHeight="35.0" prefWidth="120.0" promptText="First Name" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: transparent transparent black transparent;">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="txtLastName" prefHeight="35.0" prefWidth="120.0" promptText="Last Name" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: transparent transparent black transparent;" />
+                        <Button fx:id="btnDoneName" mnemonicParsing="false" style="-fx-background-color: black;" text="Done" textFill="WHITE" />
+                     </children>
+                  </HBox>
+                  <Separator layoutX="48.0" layoutY="60.0" prefWidth="200.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+                     <padding>
+                        <Insets top="-10.0" />
+                     </padding>
+                  </Separator>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <HBox fx:id="hbxShowUserName" alignment="CENTER" layoutX="20.0" layoutY="9.0" prefHeight="42.0" prefWidth="353.0" spacing="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                     <children>
+                        <Label fx:id="lblShowUserName" prefHeight="23.0" prefWidth="255.0" text="shaveen" textFill="WHITE">
+                           <font>
+                              <Font name="Varela Round Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imgEditUserName" fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/Edit%20Icon.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <InnerShadow height="119.26" radius="58.545" width="116.92">
+                                 <color>
+                                    <Color red="0.42105263471603394" green="0.41325536370277405" blue="0.41325536370277405" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hbxEditUserName" alignment="CENTER" layoutX="20.0" layoutY="9.0" prefHeight="42.0" prefWidth="353.0" spacing="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                     <children>
+                        <TextField fx:id="txtUserName" prefHeight="35.0" prefWidth="242.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: transparent transparent black transparent;">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="btnDoneUserName" mnemonicParsing="false" style="-fx-background-color: black;" text="Done" textFill="WHITE" />
+                     </children>
+                  </HBox>
+                  <Label layoutX="53.0" layoutY="1.0" text="Username" textFill="#c8c8c8" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <HBox fx:id="hbxShowEmail" alignment="CENTER" layoutX="20.0" layoutY="9.0" prefHeight="42.0" prefWidth="353.0" spacing="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                     <children>
+                        <Label fx:id="lblShowEmail" prefHeight="23.0" prefWidth="255.0" text="shaveenudayanga@gmail.com" textFill="WHITE">
+                           <font>
+                              <Font name="Varela Round Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imgEditEmail" fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/Edit%20Icon.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <InnerShadow height="119.26" radius="58.545" width="116.92">
+                                 <color>
+                                    <Color red="0.42105263471603394" green="0.41325536370277405" blue="0.41325536370277405" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hbxEditEmail" alignment="CENTER" layoutX="20.0" layoutY="9.0" prefHeight="42.0" prefWidth="353.0" spacing="5.0" style="-fx-text-fill: white;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                     <children>
+                        <TextField fx:id="txtEmail" prefHeight="35.0" prefWidth="242.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: transparent transparent black transparent;">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="btnDoneEmail" mnemonicParsing="false" style="-fx-background-color: black;" text="Done" textFill="WHITE" />
+                     </children>
+                  </HBox>
+                  <Label layoutX="20.0" layoutY="9.0" text="Email Address" textFill="#c8c8c8" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <HBox fx:id="hbxShowPhone" alignment="CENTER" layoutX="20.0" layoutY="9.0" prefHeight="42.0" prefWidth="353.0" spacing="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                     <children>
+                        <Label fx:id="lblShowPhone" prefHeight="23.0" prefWidth="255.0" text="0771186742" textFill="WHITE">
+                           <font>
+                              <Font name="Varela Round Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imgEditPhone" fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/Edit%20Icon.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <InnerShadow height="119.26" radius="58.545" width="116.92">
+                                 <color>
+                                    <Color red="0.42105263471603394" green="0.41325536370277405" blue="0.41325536370277405" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hbxEditPhone" alignment="CENTER" layoutX="20.0" layoutY="9.0" prefHeight="42.0" prefWidth="353.0" spacing="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                     <children>
+                        <TextField fx:id="txtPhone" prefHeight="35.0" prefWidth="242.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: transparent transparent black transparent;">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="btnDonePhone" mnemonicParsing="false" style="-fx-background-color: black;" text="Done" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label text="Phone" textFill="#c8c8c8" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0.85); -fx-background-radius: 20;" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="btnDeleteAccount" mnemonicParsing="false" style="-fx-background-color: rgba(120,0,0,0.4);" text="Delete Account" textFill="WHITE">
+               <effect>
+                  <DropShadow height="35.04" radius="22.8675" spread="0.06" width="58.43" />
+               </effect>
+               <padding>
+                  <Insets bottom="8.0" left="10.0" right="10.0" top="8.0" />
+               </padding>
+               <font>
+                  <Font name="Varela Round Regular" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <VBox fx:id="vbxHideDeleteAcc" alignment="CENTER" prefHeight="198.0" prefWidth="247.0" spacing="5.0">
+               <children>
+                  <PasswordField fx:id="pssPasswordForAccDelete" minHeight="35.0" promptText="Your Password" style="-fx-background-color: rgba(0,0,0,0.4); -fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </PasswordField>
+                  <Button fx:id="btnDeleteAccountConfirm" layoutX="122.0" layoutY="115.0" mnemonicParsing="false" style="-fx-background-color: rgba(120,0,0,0.4);" text="Confirm" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="35.04" radius="22.8675" spread="0.06" width="58.43" />
+                     </effect>
+                     <padding>
+                        <Insets bottom="8.0" left="10.0" right="10.0" top="8.0" />
+                     </padding>
+                     <font>
+                        <Font name="Varela Round Regular" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <StackPane.margin>
+                  <Insets bottom="60.0" left="60.0" right="60.0" top="60.0" />
+               </StackPane.margin>
+            </VBox>
+         </children>
+      </StackPane>
+      <VBox fx:id="vbxChangePw" alignment="CENTER" layoutX="352.0" layoutY="40.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: rgba(0,0,0,0.85); -fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <PasswordField fx:id="pssOldPassword" minHeight="35.0" minWidth="150.0" promptText="Old Password" style="-fx-background-color: rgba(0,0,0,0.4); -fx-text-fill: white;">
+               <VBox.margin>
+                  <Insets left="70.0" right="70.0" />
+               </VBox.margin>
+            </PasswordField>
+            <PasswordField fx:id="pssNewPassword" layoutX="80.0" layoutY="70.0" minHeight="35.0" minWidth="150.0" promptText="New Password" style="-fx-background-color: rgba(0,0,0,0.4); -fx-text-fill: white;">
+               <VBox.margin>
+                  <Insets left="70.0" right="70.0" />
+               </VBox.margin>
+            </PasswordField>
+            <PasswordField fx:id="pssConfirmNewPassword" layoutX="10.0" layoutY="132.0" minHeight="35.0" minWidth="150.0" promptText="Retype New Password" style="-fx-background-color: rgba(0,0,0,0.4); -fx-text-fill: white;">
+               <VBox.margin>
+                  <Insets left="70.0" right="70.0" />
+               </VBox.margin>
+            </PasswordField>
+            <Button fx:id="btnChangePassword" mnemonicParsing="false" style="-fx-background-color: rgba(120,0,0,0.4);" text="Change Passsword" textFill="WHITE">
+               <effect>
+                  <DropShadow height="35.04" radius="22.8675" spread="0.06" width="58.43" />
+               </effect>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="8.0" left="10.0" right="10.0" top="8.0" />
+               </padding>
+               <font>
+                  <Font name="Varela Round Regular" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+</GridPane>

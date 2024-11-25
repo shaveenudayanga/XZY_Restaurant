@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="417.0" prefWidth="371.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TableViewFormController">
+   <children>
+      <ImageView fitHeight="279.0" fitWidth="377.0" layoutX="9.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Table_Map.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="83.0" layoutY="14.0" text="Click on a Table to select">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="b1" layoutX="72.0" layoutY="56.0" mnemonicParsing="false" onAction="#btnTable1OnAction" prefHeight="54.0" prefWidth="54.0" style="-fx-background-color: transparent;" text="#1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="b2" layoutX="153.0" layoutY="56.0" mnemonicParsing="false" onAction="#btnTable2OnAction" prefHeight="54.0" prefWidth="54.0" style="-fx-background-color: transparent;" text="#2">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="b3" layoutX="235.0" layoutY="56.0" mnemonicParsing="false" onAction="#btnTable3OnAction" prefHeight="54.0" prefWidth="54.0" style="-fx-background-color: transparent;" text="#3">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="b4" layoutX="12.0" layoutY="105.0" mnemonicParsing="false" onAction="#btnTable4OnAction" prefHeight="54.0" prefWidth="54.0" style="-fx-background-color: transparent;" text="#4">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="b5" layoutX="294.0" layoutY="105.0" mnemonicParsing="false" onAction="#btnTable5OnAction" prefHeight="54.0" prefWidth="54.0" style="-fx-background-color: transparent;" text="#5">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="b6" layoutX="99.0" layoutY="128.0" mnemonicParsing="false" onAction="#btnTable6OnAction" prefHeight="54.0" prefWidth="69.0" style="-fx-background-color: transparent;" text="#6">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="b7" layoutX="191.0" layoutY="128.0" mnemonicParsing="false" onAction="#btnTable7OnAction" prefHeight="54.0" prefWidth="69.0" style="-fx-background-color: transparent;" text="#7">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="b8" layoutX="28.0" layoutY="184.0" mnemonicParsing="false" onAction="#btnTable8OnAction" prefHeight="54.0" prefWidth="69.0" style="-fx-background-color: transparent;" text="#8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="b9" layoutX="271.0" layoutY="186.0" mnemonicParsing="false" onAction="#btnTable9OnAction" prefHeight="54.0" prefWidth="69.0" style="-fx-background-color: transparent;" text="#9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="b10" layoutX="12.0" layoutY="256.0" mnemonicParsing="false" onAction="#btnTable10OnAction" prefHeight="54.0" prefWidth="54.0" style="-fx-background-color: transparent;" text="#10">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="b11" layoutX="303.0" layoutY="256.0" mnemonicParsing="false" onAction="#btnTable11OnAction" prefHeight="54.0" prefWidth="54.0" style="-fx-background-color: transparent;" text="#11">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="b12" layoutX="111.0" layoutY="210.0" mnemonicParsing="false" onAction="#btnTable12OnAction" prefHeight="95.0" prefWidth="64.0" style="-fx-background-color: transparent;" text="#12">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="b13" layoutX="196.0" layoutY="210.0" mnemonicParsing="false" onAction="#btnTable13OnAction" prefHeight="95.0" prefWidth="64.0" style="-fx-background-color: transparent;" text="#13">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClearSelection" layoutX="53.0" layoutY="343.0" mnemonicParsing="false" onAction="#btnClearSelectionOnAction" prefHeight="26.0" prefWidth="109.0" text="Clear selection" />
+      <Button fx:id="btnConfirmSelection" layoutX="199.0" layoutY="344.0" mnemonicParsing="false" onAction="#btnConfirmSelectionOnAction" text="Confirm selection" />
+      <Label layoutX="86.0" layoutY="394.0" text="*Only available tables can be selected" />
+   </children>
+</AnchorPane>

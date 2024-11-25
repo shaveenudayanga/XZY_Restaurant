@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" minHeight="500.0" minWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.customer.HomeFormController">
+   <children>
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <AnchorPane fx:id="pane1" opacity="0.69" prefHeight="536.0" prefWidth="44.0" styleClass="anchor-pane" stylesheets="@../../stylesheets/Menu.css" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="44.0" spacing="20.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <ImageView fx:id="imgMenu" accessibleRole="BUTTON" fitHeight="24.0" fitWidth="32.0" onMouseClicked="#imgMenuOnMouseClicked" pickOnBounds="true" preserveRatio="true" styleClass="menuButton">
+                           <image>
+                              <Image url="@../../images/slidebar/menu.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="32.0" onMouseClicked="#imgDashboardOnMouseClicked" pickOnBounds="true" preserveRatio="true" styleClass="menuButton">
+                           <image>
+                              <Image url="@../../images/slidebar/dash1.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="32.0" onMouseClicked="#imgBookNowOnMouseClicked" pickOnBounds="true" preserveRatio="true" styleClass="menuButton">
+                           <image>
+                              <Image url="@../../images/slidebar/add1.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="32.0" onMouseClicked="#imgYourBookingsOnMouseClicked" opacity="0.5" pickOnBounds="true" preserveRatio="true" styleClass="menuButton">
+                           <image>
+                              <Image url="@../../images/slidebar/booked.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="32.0" onMouseClicked="#imgUserOnMouseClicked" opacity="0.5" pickOnBounds="true" preserveRatio="true" styleClass="menuButton">
+                           <image>
+                              <Image url="@../../images/slidebar/icons8-user.gif" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="32.0" onMouseClicked="#imgLogOutOnMouseClicked" opacity="0.5" pickOnBounds="true" preserveRatio="true" styleClass="menuButton">
+                           <image>
+                              <Image url="@../../images/slidebar/icons8-logout-48.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane fx:id="paneCenter" prefHeight="490.0" prefWidth="761.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(150,150,150,0.8);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <GridPane fx:id="paneDashboard" alignment="CENTER" hgap="30.0" style="-fx-background-color: white;" stylesheets="@../../stylesheets/Dashboard.css" vgap="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: rgba(0,0,0,0.7); -fx-background-radius: 20;">
+                           <children>
+                              <ImageView fx:id="imgDp" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/profile-user.256x256.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lblHiUser" styleClass="hiUser" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="tilePane1" alignment="CENTER" onMouseClicked="#imgUserOnMouseClicked" spacing="10.0" style="-fx-background-color: rgba(0,0,0,0.7); -fx-background-radius: 20;" styleClass="tileButton" GridPane.columnIndex="1">
+                           <children>
+                              <ImageView fx:id="tileImg1" fitHeight="133.0" fitWidth="179.0" onMouseClicked="#imgUserOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/edit-profile.256x210.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Edit Profile" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <StackPane fx:id="tilePane2" style="-fx-background-color: rgba(0,0,0,0.7); -fx-background-radius: 20;" styleClass="tileButton" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView fx:id="tileImg2" fitHeight="192.0" fitWidth="270.0" onMouseClicked="#imgBookNowOnMouseClicked" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.8;">
+                                 <image>
+                                    <Image url="@../../images/BookNow.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </StackPane>
+                        <VBox fx:id="tilePane3" alignment="CENTER" onMouseClicked="#imgYourBookingsOnMouseClicked" spacing="10.0" style="-fx-background-color: rgba(0,0,0,0.7); -fx-background-radius: 20;" styleClass="tileButton" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView fx:id="tileImg3" fitHeight="133.0" fitWidth="179.0" onMouseClicked="#imgYourBookingsOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/My_Bookings.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" text="Your Bookings" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </padding>
+                  </GridPane>
+                  <fx:include fx:id="paneBookNow" source="sections/BookNowSection.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <fx:include fx:id="paneYourBookings" source="sections/YourBookingsSection.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <fx:include fx:id="paneUserInfo" source="sections/UserProfileSection.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane fx:id="paneFade" disable="true" prefHeight="490.0" prefWidth="761.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <AnchorPane fx:id="menuPane" layoutX="20.0" layoutY="20.0" minWidth="180.0" opacity="0.8" styleClass="anchor-pane" stylesheets="@../../stylesheets/Menu.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="44.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+               <children>
+                  <Button alignment="BASELINE_LEFT" minWidth="180.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" prefHeight="50.0" styleClass="menuButton" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="Varela Round Regular" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" minWidth="180.0" mnemonicParsing="false" onAction="#btnBookNowOnAction" prefHeight="50.0" styleClass="menuButton" text="Book now" textFill="WHITE">
+                     <font>
+                        <Font name="Varela Round Regular" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="59.0" minWidth="180.0" mnemonicParsing="false" onAction="#btnYourBookingsOnAction" prefHeight="50.0" styleClass="menuButton" text="Your Bookings" textFill="WHITE">
+                     <font>
+                        <Font name="Varela Round Regular" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="156.0" minWidth="180.0" mnemonicParsing="false" onAction="#btnUserOnAction" prefHeight="50.0" styleClass="menuButton" text="User" textFill="WHITE">
+                     <font>
+                        <Font name="Varela Round Regular" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="205.0" minWidth="180.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" prefHeight="50.0" styleClass="menuButton" text="Log out" textFill="WHITE">
+                     <font>
+                        <Font name="Varela Round Regular" size="16.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="150.0" fitWidth="176.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" styleClass="anchor-pane">
+                     <image>
+                        <Image url="@../../images/logo.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
